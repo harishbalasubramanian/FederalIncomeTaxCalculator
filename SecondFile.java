@@ -48,7 +48,6 @@ public class sec extends JFrame{
 	public int g;
 	public boolean q;
 	public boolean i;
-	GridBagConstraints grid = new GridBagConstraints();
 	public sec(){
 		super("Federal Income Tax Calculator");
 		panel5 = new JPanel();
@@ -201,6 +200,9 @@ public class sec extends JFrame{
 									
 								}else if (num1>13600 && num1<=51800){
 									bu = Math.round((num1-(13600+18000))*12)/100.0 + 1360;
+									if(bu<0){
+										bu = 0;	
+									}
 								}else if (num1>51800 && num1<=82500){
 									bu = Math.round((num1-(51800+18000))*22)/100.0 + 5944;
 									if(bu<0){
